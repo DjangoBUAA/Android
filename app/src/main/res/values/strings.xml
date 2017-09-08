@@ -9,24 +9,22 @@
     <string name="about_detail">
         <![CDATA[
         科学Host中获取的Host都是来自
-        <a href="https://github.com/racaljk">racaljk</a>
+        <a href="https://github.com/googlehosts">googlehosts</a>
         的
-        <a href="https://github.com/racaljk/hosts">hosts开源项目</a>
-        \n我只是一个host 的搬运工
-        \n在这里特别感谢 <a href="https://github.com/racaljk">racaljk</a>提供的 <a href="https://github.com/racaljk/hosts">开源hosts</a>
+        <a href="https://github.com/googlehosts/hosts">hosts开源项目</a>
         ]]>
     </string>
 
     <string name="host_github">
         <![CDATA[
         host 开源地址:
-        <a href="https://github.com/racaljk/hosts">github.com/racaljk/hosts</a>
+        <a href="https://github.com/googlehosts/hosts">https://github.com/googlehosts/hosts</a>
         ]]>
     </string>
     <string name="app_github">
         <![CDATA[
         科学Host 开源地址:
-        <a href="https://github.com/racaljk/hosts">github.com/racaljk/hosts</a>
+        <a href="https://github.com/googlehosts/hosts">https://github.com/googlehosts/hosts</a>
          ]]>
     </string>
 
