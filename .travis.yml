@@ -17,6 +17,8 @@ android:
   - build-tools-23.0.3
   - extra-android-m2repository
   - extra-android-support
+install:
+ - cp local.properties.travis local.properties
 script:
 - "./gradlew assembleRelease"
 deploy:
@@ -24,6 +26,6 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: GSkw9yxdZF5+rcbSbgfbQljC9Qqj8vJUdRu+XOdzpjmTnhPFCQKXh+TG0DWvgfX7T8D7/Q2ohvO+T7kKy9+6Vf7vcOeJnwGIuVl60QdRcR84ME1sRvDoL9kGXU2SA/DYPxi6l66/BJbnItDbU63mYXYoYds4uLSuoILd95YDedtnIaMJUIVIipTtVUp/z0ZM3rc1BEByOXx5Q2nXcp/Y9sVnnTDopyU6e6xKBdfglLA+41nbZhiZOFfhjjY8s00Rr2o0afBKk+oRpk8a5ky/y74YRTI5dBypoN0jYq1coJ0SQJKu/xCo2q/0UOSPNfhQXQuzcSVw3LAyxsru2Jf/HlzWwG+5uv1E99jtJWy/dnODQNy48e241dtd72tkBRDEggmVCeePm5s38kY/UdNcygK0xfFhXtplnq2vGiZcT9F44g6KTIeRXr6XHPqiTsW7SYQPeu+p1lF5IgNTOj7E/7UlsHs9l0tB+KGcSKh2fP43JhCEqV1MizyGDLuC/SqkT2Jq/ObXj8/4Drsvf/ZjjTGjDD8e7ZJuFRwzli3u0HkQf/3Xw9t7CC+P3tZiIgrI441xxT+a2An3whWrNFpGb0+nCyuacdXDyidQSKRq1et8IshabzUfspoH1tKVp9AVod5Zbw3uJJUus8n0HzWmAFKTynRvXGUDiD0Aj71WDfc=
-  file: /home/travis/build/HostsTools/Android/app/app-release.apk
+  file: /home/travis/build/HostsTools/Android/app/build/outputs/apk/app-release.apk
   on:
     tags: true
