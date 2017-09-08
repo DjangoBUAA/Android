@@ -51,12 +51,12 @@ def propFile = file('../local.properties')
 if (propFile.canRead()){        
 def Properties props = new Properties()
         props.load(new FileInputStream(propFile))        
-if (props!=null && props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
-                props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+if (props!=null && props.containsKey('STORE_FILE') && props.containsKey('key.store.password') &&
+                props.containsKey('key.alias')) {
             android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
-            android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
-            android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
-            android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+            android.signingConfigs.release.storePassword = props['key.store.password']
+            android.signingConfigs.release.keyAlias = props['key.alias']
+            android.signingConfigs.release.keyPassword = props['key.store.password']
         } else {
             println 'local.properties found but some entries are missing'
             android.buildTypes.release.signingConfig = null
