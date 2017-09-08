@@ -51,9 +51,9 @@ def propFile = file('../local.properties')
 if (propFile.canRead()){        
 def Properties props = new Properties()
         props.load(new FileInputStream(propFile))        
-if (props!=null && props.containsKey('STORE_FILE') && props.containsKey('key.store.password') &&
+if (props!=null && props.containsKey('key.store') && props.containsKey('key.store.password') &&
                 props.containsKey('key.alias')) {
-            android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+            android.signingConfigs.release.storeFile = file(props['key.store'])
             android.signingConfigs.release.storePassword = props['key.store.password']
             android.signingConfigs.release.keyAlias = props['key.alias']
             android.signingConfigs.release.keyPassword = props['key.store.password']
